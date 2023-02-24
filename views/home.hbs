@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head title="หน้าแรก" }}
+<body class="bg-gray-300">
+    {{> header }}
+    <div class="m-3">
+        <div class="h-screen grid grid-cols-3">
+            <div class="col-span-2"></div>
+            <div class="bg-white rounded p-3">
+                <p class="text-center">การใช้พลังงานไฟฟ้า</p>
+                {{#each energy }}
+                <div class="flex justify-between mx-auto">
+                    <p class="p-2 text-sm">{{ this.location }}</p>
+                    <p class="text-sm">{{ this.kW }} kW</p>
+                </div>
+                {{/each }}
+            </div>
+        </div>
+    </div>
+    {{> footer }}
+</body>
+
+</html>
